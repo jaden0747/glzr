@@ -48,7 +48,7 @@ window_effects:
 window_behavior:
   # New windows are created in this state whenever possible.
   # Allowed values: 'tiling', 'floating'.
-  initial_state: 'tiling'
+  initial_state: 'floating'
 
   # Sets the default options for when a new window is created. This also
   # changes the defaults for when the state change commands, like
@@ -85,15 +85,13 @@ window_rules:
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: 'zebar' }
+      - window_process: { equals: 'sv3d' }
 
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
         window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
 
-      # Ignore rules for various 3rd-party apps.
-      - window_process: { equals: 'PowerToys.PowerAccent' }
-      - window_process: { equals: 'Lively' }
-        window_class: { regex: 'HwndWrapper*' }
+      # Ignore rules for various 3rd-party apps.  - window_process: { equals: 'PowerToys.PowerAccent' } - window_process: { equals: 'Lively' } window_class: { regex: 'HwndWrapper*' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -141,13 +139,13 @@ keybindings:
 
   # Resize focused window by a percentage or pixel amount.
   - commands: ['resize --width -2%']
-    bindings: ['alt+u']
+    bindings: ['ctrl+alt+u']
   - commands: ['resize --width +2%']
-    bindings: ['alt+p']
+    bindings: ['ctrl+alt+p']
   - commands: ['resize --height +2%']
-    bindings: ['alt+o']
+    bindings: ['ctrl+alt+o']
   - commands: ['resize --height -2%']
-    bindings: ['alt+i']
+    bindings: ['ctrl+alt+i']
 
   # As an alternative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
