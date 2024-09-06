@@ -40,11 +40,10 @@ window/bar:
     font-size: 15px;
     padding: 4px 24px;
     border-bottom: 1px solid rgb(255 255 255 / 5%);;
-    # background: linear-gradient(rgba(40, 40, 40, 1.0), rgba(40, 40, 40, 0.56));
-    background: rgba(40, 40, 40, 1.0);
+    background: linear-gradient(rgba(31, 35, 39, 0.5), rgba(31, 35, 39, 0.5));
 
     i {
-      color: rgba(0, 174, 248, 0.81);
+      color: rgb(0, 119, 255);
       margin-right: 7px;
     }
 
@@ -79,7 +78,7 @@ window/bar:
 
           &.focused,
           &:hover {
-            background: rgb(35, 188, 240);
+            background: rgba(0, 119, 255, 0.64);
           }
         }
       providers: ['glazewm']
