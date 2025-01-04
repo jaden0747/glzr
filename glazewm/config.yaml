@@ -96,7 +96,7 @@ window_behavior:
   state_defaults:
     floating:
       # Whether to center floating windows by default.
-      centered: true
+      centered: false
 
       # Whether to show floating windows as always on top.
       shown_on_top: false
@@ -125,7 +125,7 @@ window_rules:
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: 'zebar' }
-      - window_process: { equals: 'sv3d' }
+      # - window_process: { equals: 'sv3d' }
 
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
